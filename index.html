@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cumulus Banco - Seu Futuro Financeiro</title>
+    
+    <!-- Salesforce Personalization (Data Cloud) Beacon -->
+    <script type="text/javascript">
+      // SIMULAÇÃO DO SDK PARA DEMO
+      window.SalesforceInteractions = window.SalesforceInteractions || {
+        init: (cfg) => { console.log('%c[DC SDK] Init:', 'color: #00A1E0', cfg); },
+        reinit: (cfg) => { console.log('%c[DC SDK] Reinit:', 'color: #00A1E0', cfg); },
+        sendEvent: (ev) => { console.log('%c[DC SDK] Event:', 'color: #00A1E0', ev); },
+        Personalization: {
+          Config: { initialize: (cfg) => { console.log('%c[DC SDK] P13n Init:', 'color: #00A1E0', cfg); } },
+          getEngagementConfig: () => ({ destinations: [] })
+        }
+      };
+      
+      // Placeholder para o script real:
+      // (function(g,e,m,i,n,i){...})(window,document,'script','https://cdn.example.com/sdk.js','SalesforceInteractions');
+    </script>
+    
+    <!-- Sitemap.js (Simulado para carregar após o SDK) -->
+    <script type="module" src="/src/sdk/sitemap.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

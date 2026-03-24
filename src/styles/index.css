@@ -1,0 +1,68 @@
+:root {
+  --cumulus-primary: #1A3A5C;
+  --cumulus-secondary: #2E86C1;
+  --cumulus-accent: #5DADE2;
+  --cumulus-cloud: #EBF5FB;
+  --cumulus-white: #FFFFFF;
+  --cumulus-dark: #0D1B2A;
+  --cumulus-gray: #6C7A89;
+  --cumulus-bg-gray: #F8FAFC;
+  --cumulus-success: #27AE60;
+  --cumulus-gold: #F39C12;
+  --cumulus-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--cumulus-bg-gray);
+  color: var(--cumulus-dark);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: var(--cumulus-primary);
+}
+
+/* Helper classes */
+.flex { display: flex; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.grid { display: grid; }
+.gap-4 { gap: 1rem; }
+.gap-8 { gap: 2rem; }
+.mt-8 { margin-top: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.text-center { text-align: center; }
+
+/* Section styles */
+section {
+  padding: 4rem 0;
+}
