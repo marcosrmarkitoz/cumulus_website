@@ -1,7 +1,17 @@
 import { useEffect } from 'react';
 
+const SALESFORCE_ORG_ID = import.meta.env.VITE_SF_ORG_ID;
+const SALESFORCE_DEPLOYMENT_NAME = import.meta.env.VITE_SF_DEPLOYMENT_NAME;
+const SALESFORCE_SITE_URL = import.meta.env.VITE_SF_SITE_URL;
+const SALESFORCE_SCRT2_URL = import.meta.env.VITE_SF_SCRT2_URL;
+
 const SalesforceChat = () => {
   useEffect(() => {
+    if (!SALESFORCE_ORG_ID || !SALESFORCE_SITE_URL) {
+      console.warn('[SalesforceChat] Missing env vars — chat disabled.');
+      return;
+    }
+
     if (document.getElementById('sf-bootstrap-script')) {
       return;
     }
@@ -10,12 +20,10 @@ const SalesforceChat = () => {
       try {
         embeddedservice_bootstrap.settings.language = 'pt_BR';
         embeddedservice_bootstrap.init(
-          '00DJ9000002EvTJ',
-          'SDO_Messaging_for_Web',
-          'https://storm-6ec90040c65995.my.site.com/ESWSDOMessagingforWeb1768924291151',
-          {
-            scrt2URL: 'https://storm-6ec90040c65995.my.salesforce-scrt.com'
-          }
+          SALESFORCE_ORG_ID,
+          SALESFORCE_DEPLOYMENT_NAME,
+          SALESFORCE_SITE_URL,
+          { scrt2URL: SALESFORCE_SCRT2_URL }
         );
       } catch (err) {
         console.error('Error loading Embedded Messaging: ', err);
@@ -25,7 +33,7 @@ const SalesforceChat = () => {
     const script = document.createElement('script');
     script.id = 'sf-bootstrap-script';
     script.type = 'text/javascript';
-    script.src = 'https://storm-6ec90040c65995.my.site.com/ESWSDOMessagingforWeb1768924291151/assets/js/bootstrap.min.js';
+    script.src = `${SALESFORCE_SITE_URL}/assets/js/bootstrap.min.js`;
     script.onload = window.initEmbeddedMessaging;
     document.body.appendChild(script);
   }, []);
