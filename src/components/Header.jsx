@@ -77,19 +77,21 @@ const Header = () => {
         </nav>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <button 
-            onClick={() => setIsLoginOpen(true)}
-            style={{
-              padding: '0.6rem 1.25rem',
-              borderRadius: '8px',
-              backgroundColor: 'var(--cumulus-primary)',
-              color: 'white',
-              fontWeight: 600,
-              fontSize: '0.9rem'
-            }}
-          >
-            Entrar
-          </button>
+          {location.pathname !== '/banking' && (
+            <button
+              onClick={() => setIsLoginOpen(true)}
+              style={{
+                padding: '0.6rem 1.25rem',
+                borderRadius: '8px',
+                backgroundColor: 'var(--cumulus-primary)',
+                color: 'white',
+                fontWeight: 600,
+                fontSize: '0.9rem'
+              }}
+            >
+              Entrar
+            </button>
+          )}
           
           <button 
             style={{ display: 'block' }} 

@@ -23,12 +23,12 @@ const Banking = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>A conta digital que simplifica sua vida.</h1>
+                <h1 style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>Bem-vindo de volta, João Silva!</h1>
                 <p style={{ fontSize: '1.2rem', color: 'var(--cumulus-primary)', marginBottom: '2rem', lineHeight: 1.5, fontWeight: 500 }}>
-                  Tudo o que você precisa em um só lugar. Sem taxas escondidas, sem filas, 100% transparente.
+                  Sua conta está pronta para você. Gerencie tudo em um só lugar com segurança e praticidade.
                 </p>
                 <div style={{ display: 'flex', gap: '1rem' }}>
-                  <CTAButton actionName="banking_open_account">Abrir conta</CTAButton>
+                  <CTAButton actionName="banking_create_pix">Criar chave Pix</CTAButton>
                   <CTAButton variant="secondary" actionName="banking_learn_more">Portabilidade de salário</CTAButton>
                 </div>
               </motion.div>
@@ -43,7 +43,7 @@ const Banking = () => {
                     <span style={{ fontWeight: 600 }}>Saldo Disponível</span>
                     <Wallet color="var(--cumulus-secondary)" />
                   </div>
-                  <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>R$ 12.450,00</div>
+                  <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>R$ 4.000,00</div>
                   <div style={{ borderTop: '1px solid #d0e1ee', paddingTop: '1.5rem', display: 'flex', gap: '2rem' }}>
                     <div>
                       <div style={{ fontSize: '0.8rem', color: 'var(--cumulus-gray)' }}>Rendimento (Mês)</div>
