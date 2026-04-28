@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Environment variables (Salesforce credentials)
+.env
+.env.local
+.env.production
+
 # Editor folders and files
 .vscode/*
 !.vscode/extensions.json

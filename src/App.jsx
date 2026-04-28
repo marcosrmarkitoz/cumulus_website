@@ -8,6 +8,7 @@ import Loans from './pages/Loans'
 import Consortium from './pages/Consortium'
 import Insurance from './pages/Insurance'
 import Investments from './pages/Investments'
+import SalesforceChat from './components/SalesforceChat'
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/investimento" element={<Investments />} />
         </Routes>
       </Layout>
+      {/* Salesforce Agentforce Chat - carregado globalmente */}
+      <SalesforceChat />
     </Router>
   )
 }
